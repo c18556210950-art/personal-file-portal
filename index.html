@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f4f6fa">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./icon.png">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+  <title>个人文件</title>
+</head>
+<body>
+  <main>
+    <header>
+      <img src="./icon.png" width="38" height="38" alt="">
+      <h1>个人文件</h1>
+      <button id="logout" class="quiet" type="button" hidden>退出</button>
+    </header>
+    <form id="login" hidden>
+      <h2>登录文件门户</h2>
+      <label for="password">访问口令</label>
+      <input id="password" type="password" autocomplete="current-password" required>
+      <button type="submit">登录</button>
+      <p id="login-error" role="alert"></p>
+    </form>
+    <section id="browser" hidden>
+      <div class="device">
+        <span id="device"></span>
+        <button id="refresh" class="quiet" type="button">刷新</button>
+      </div>
+      <nav id="crumbs" aria-label="当前位置"></nav>
+      <div id="folder-tools" class="folder-tools" hidden>
+        <select id="sort-select" aria-label="排序方式">
+          <option value="name-asc">名称 ↑</option><option value="name-desc">名称 ↓</option>
+          <option value="mtime-desc">修改日期 ↓</option><option value="mtime-asc">修改日期 ↑</option>
+          <option value="type-asc">类型 ↑</option><option value="type-desc">类型 ↓</option>
+          <option value="size-desc">大小 ↓</option><option value="size-asc">大小 ↑</option>
+        </select>
+        <input id="folder-search" type="search" placeholder="搜索此文件夹" aria-label="搜索此文件夹" maxlength="255">
+        <button id="unshare-current" class="quiet unshare" type="button" hidden>移除查看</button>
+      </div>
+      <p id="action-message" role="status" hidden></p>
+      <p id="notice" role="status" hidden></p>
+      <div id="details-heading" class="details-heading details-grid" role="group" aria-label="按列排序" hidden>
+        <button type="button" data-sort="name">名称</button>
+        <button type="button" data-sort="mtime">修改日期</button>
+        <button type="button" data-sort="type">类型</button>
+        <button type="button" data-sort="size">大小</button>
+      </div>
+      <div id="entries"></div>
+      <button id="more" type="button" hidden>加载更多</button>
+    </section>
+  </main>
+</body>
+</html>

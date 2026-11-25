@@ -1,0 +1,11 @@
+__pycache__/
+.venv/
+node_modules/
+agent.json
+pairing.json
+portal-config.json
+*.sqlite*
+*.db*
+*.log
+.env*
+!*.example

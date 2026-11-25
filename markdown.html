@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Markdown · 个人文件</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./markdown.css">
+  <script src="./markdown-it.min.js" defer></script>
+  <script src="./markdown.js" defer></script>
+</head>
+<body>
+  <main class="reader">
+    <header class="reader-bar">
+      <a id="folder-link" href="./">‹ 文件夹</a>
+      <span id="document-name"></span>
+      <a id="source-download" class="download" hidden>下载原件</a>
+    </header>
+    <p id="reader-status" role="status">正在打开文件…</p>
+    <article id="document-content" class="markdown" hidden></article>
+  </main>
+</body>
+</html>
